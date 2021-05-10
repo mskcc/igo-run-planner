@@ -6,7 +6,7 @@
     "start": "nodemon --exec babel-node -r dotenv/config ./bin/www",
     "clean": "rm -rf node_modules && rm -rf public",
     "dev": "ENV=QA nodemon ./bin/www",
-    "test": "ENV=test JWT_SECRET={ADD_JWT_SECRET} nyc _mocha --timeout 10000 --exit --report lcovonly -- -R spec",
+    "test": "mocha 'tests/**/*.js' ",
     "lint": "eslint --fix --config .eslintrc.json \"**/*.js\""
   },
   "dependencies": {
@@ -38,7 +38,7 @@
     "chai-http": "^4.3.0",
     "eslint": "^6.8.0",
     "eslint-plugin-node": "^11.1.0",
-    "mocha": "^6.2.2",
+    "mocha": "^6.2.3",
     "nodemon": "^1.19.4"
   }
 }
