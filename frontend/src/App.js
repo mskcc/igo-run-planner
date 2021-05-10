@@ -4,6 +4,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Table from './Table';
+import Runs from './Runs';
 
 const theme = createMuiTheme({
   typography: {
@@ -32,7 +33,8 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path='/' component={Table} />
+          <Route exact path='/' component={Table} />
+          <Route exact path='/planRuns' component={Runs} />
         </Switch>
       </Router>
     </MuiThemeProvider>
